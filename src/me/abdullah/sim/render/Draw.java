@@ -13,10 +13,6 @@ public class Draw {
     public Map<Integer, Integer> pixels = new HashMap<>();
     private Map<Integer, Integer> pushMap = new HashMap<>();
 
-    public void tick(){
-
-    }
-
     public void addPixel(int x, int y){
         pushMap.put(x, y);
     }

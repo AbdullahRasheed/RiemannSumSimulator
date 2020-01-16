@@ -24,16 +24,10 @@ public class Main extends Canvas implements Runnable {
         draw = new Draw();
         sums = new Sums(draw);
 
-        initObjects();
-
         this.addMouseMotionListener(new MouseMotionInput(draw));
         this.addMouseListener(new MouseInput(draw));
         this.addKeyListener(new KeyInput(sums));
         new Window(WIDTH, HEIGHT, "Sim", this);
-    }
-
-    public void initObjects(){
-
     }
 
     public synchronized void start(){
@@ -64,7 +58,6 @@ public class Main extends Canvas implements Runnable {
             delta += (now - lastTime) / ns;
             lastTime = now;
             while (delta >= 1){
-                tick();
                 delta--;
             }
             if(running) render();
@@ -96,10 +89,6 @@ public class Main extends Canvas implements Runnable {
 
         g.dispose();
         bs.show();
-    }
-
-    private void tick(){
-        draw.tick();
     }
 
     public static void main(String[] args){
