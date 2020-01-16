@@ -23,8 +23,11 @@ public class Sums {
         if(draw.pixels.isEmpty()) return;
         int space = calc.space(subdivisions);
         Map<Integer, Integer> rectPoints = calc.getNSubdivisions(subdivisions);
+        int sum = 0;
         for (Integer integer : rectPoints.keySet()) {
+            sum += space * (rectPoints.get(integer));
             g.drawRect(integer, rectPoints.get(integer), space, 900-rectPoints.get(integer));
         }
+        g.drawString("Sum: " + sum/Calc.PIXEL_RATIO, 100, 170);
     }
 }

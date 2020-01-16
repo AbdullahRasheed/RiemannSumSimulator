@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Calc {
 
-    public static final int PIXEL_RATIO = 200;
+    public static final int PIXEL_RATIO = 2000;
 
     private Draw draw;
     public Calc(Draw draw) {
