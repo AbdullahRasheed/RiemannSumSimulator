@@ -36,7 +36,7 @@ public class Draw {
             clear = false;
         }
 
-        //line
+        //linebar
 
         g.fillRect(50, 900, 1800, 20);
 
